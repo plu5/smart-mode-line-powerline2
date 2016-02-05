@@ -13,8 +13,11 @@ Append the following to your emacs init file (~/.emacs by default). `sml/theme` 
 
 ## Customization
 `mode-line-inactive` — inactive modeline and outer layer of active modeline.
+
 `powerline-active1` — middle layer of active modeline.
+
 `powerline-active2` — inner layer of active modeline.
+
 Additionally you should have a look at the Smart Mode Line Faces customization group (`M-x customize-group smart-mode-line-faces`).
 
 You might want to decrease the minimum of `sml/name-width` to get the inner layer text to display nearer to the separator.
