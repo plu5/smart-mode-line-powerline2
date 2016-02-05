@@ -1,5 +1,5 @@
 # smart-mode-line-powerline2
-an alternate powerline theme for smart-mode-line (emacs)
+an alternate powerline theme for [smart-mode-line](https://github.com/Malabarba/smart-mode-line) (emacs)
 
 ![demo](demo.gif)
 
@@ -26,3 +26,4 @@ You might want to decrease the minimum of `sml/name-width` to get the inner laye
 
 Here is what it looks like with the default emacs theme:
 ![default](default.png)
+
