@@ -28,7 +28,8 @@
 
 (set-face-attribute 'powerline-active2 nil :inherit 'sml/global)
 (set-face-attribute 'powerline-active1 nil :inherit 'sml/global)
-(let ((l0 (face-background 'mode-line-inactive))
+(let ((inactive (face-background 'mode-line-inactive))
+      (l0 (face-background 'mode-line))
       (l3 (or (face-background 'powerline-active1) "grey22"))
       (l8 (or (face-background 'powerline-active2) "grey40"))
       (separator-left
@@ -42,7 +43,7 @@
   (custom-theme-set-faces
    'smart-mode-line-powerline2
    `(mode-line-buffer-id ((t :inherit sml/filename :foreground nil :background nil)))
-   `(mode-line-inactive ((t :box (:line-width -8 :color ,l0))))
+   `(mode-line-inactive ((t :box (:line-width -8 :color ,inactive))))
    `(mode-line ((t :background ,l0)))
    `(sml/global    ((t :foreground "grey50" :inverse-video nil)))
 

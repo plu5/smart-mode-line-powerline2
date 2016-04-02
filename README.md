@@ -12,7 +12,9 @@ Append the following to your emacs init file (~/.emacs by default). `sml/theme` 
 ```
 
 ## Customization
-`mode-line-inactive` — inactive modeline and outer layer of active modeline.
+`mode-line-inactive` — inactive modeline.
+
+`mode-line` — outer layer of active modeline.
 
 `powerline-active1` — middle layer of active modeline.
 
