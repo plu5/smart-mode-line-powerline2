@@ -58,23 +58,24 @@
    '(sml/read-only           ((t :inherit sml/not-modified :foreground "Cyan")))
 
    ;; 3
-   `(sml/prefix    ((t :background ,l3 :inherit sml/global :foreground "#bf6000")))
-   `(sml/filename  ((t :background ,l3 :inherit sml/global :foreground "black")))
-   `(sml/sudo      ((t :background ,l3 :inherit sml/outside-modified)))
-   `(sml/git       ((t :background ,l3 :inherit (sml/read-only sml/prefix))))
-   `(sml/folder    ((t :background ,l3 :inherit sml/global :weight normal :foreground "Black")))
+   `(sml/prefix     ((t :background ,l3 :inherit sml/global :foreground "#bf6000" :weight bold)))
+   `(sml/projectile ((t :inherit sml/prefix)))
+   `(sml/filename   ((t :background ,l3 :inherit sml/global :foreground "black" :weight bold)))
+   `(sml/sudo       ((t :background ,l3 :inherit sml/outside-modified)))
+   `(sml/git        ((t :background ,l3 :inherit (sml/read-only sml/prefix))))
+   `(sml/folder     ((t :background ,l3 :inherit sml/global :weight normal :foreground "black")))
 
    ;; 8
    `(sml/name-filling        ((t :background ,l8 :inherit sml/prefix :weight normal)))
    `(sml/position-percentage ((t :background ,l8 :inherit sml/prefix :weight normal :foreground "#330000")))
-   `(sml/modes               ((t :background ,l8 :inherit sml/global :foreground "Black")))
+   `(sml/modes               ((t :background ,l8 :inherit sml/global :foreground "black")))
    `(sml/process             ((t :background ,l8 :inherit sml/prefix)))
    `(sml/vc                  ((t :background ,l8 :inherit sml/git :foreground "#0000aa")))
    `(sml/vc-edited           ((t :background ,l8 :inherit sml/prefix :foreground "#330000")))
 
    ;; 3
    ;; minor modes
-   `(sml/minor-modes         ((t :inherit sml/folder)))
+   `(sml/minor-modes         ((t :inherit sml/folder :foreground "grey40")))
 
    ;; 0
    `(sml/discharging         ((t :background ,l0 :inherit sml/global :foreground "Red")))

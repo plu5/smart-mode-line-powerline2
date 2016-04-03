@@ -1,7 +1,7 @@
 # smart-mode-line-powerline2
 an alternate powerline theme for [smart-mode-line](https://github.com/Malabarba/smart-mode-line) (emacs)
 
-![demo](demo.gif)
+![smart-mode-line-powerline2](example.png)
 
 ## Installation
 Place `smart-mode-line-powerline2-theme.el` in your theme load path (defined by variable `custom-theme-load-path`).
@@ -11,7 +11,7 @@ Append the following to your emacs init file (~/.emacs by default). `sml/theme` 
 (sml/setup)
 ```
 
-## Customization
+## Customisation
 `mode-line-inactive` — inactive modeline.
 
 `mode-line` — outer layer of active modeline.
@@ -22,10 +22,9 @@ Append the following to your emacs init file (~/.emacs by default). `sml/theme` 
 
 You may need to restart for the separators to properly update.
 
-Additionally you should have a look at the Smart Mode Line Faces customization group (`M-x customize-group smart-mode-line-faces`).
+Additionally you should have a look at the Smart Mode Line Faces customisation group (`M-x customize-group smart-mode-line-faces`).
 
 You might want to decrease the minimum of `sml/name-width` to get the inner layer text to display nearer to the separator.
 
 Here is what it looks like with the default emacs theme:
 ![default](default.png)
-
