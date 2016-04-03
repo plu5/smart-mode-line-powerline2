@@ -1,4 +1,5 @@
-;;; smart-mode-line-powerline2-theme.el --- an alternate powerline theme for smart-mode-line
+;;; smart-mode-line-powerline2-theme.el --- an alternate powerline theme for
+;;;                                         smart-mode-line
 
 ;; Original powerline theme and smart-mode-line are by Artur Malabarba
 ;; http://github.com/Bruce-Connor/smart-mode-line
@@ -28,7 +29,7 @@
 
 (set-face-attribute 'powerline-active2 nil :inherit 'sml/global)
 (set-face-attribute 'powerline-active1 nil :inherit 'sml/global)
-(let ((inactive (face-background 'mode-line-inactive))
+(let ((l-inactive (face-background 'mode-line-inactive))
       (l0 (face-background 'mode-line))
       (l3 (or (face-background 'powerline-active1) "grey22"))
       (l8 (or (face-background 'powerline-active2) "grey40"))
@@ -39,11 +40,12 @@
       (separator-right
        '(intern (format "powerline-%s-%s"
                         (powerline-current-separator)
-                        (cdr powerline-default-separator-dir)))))
+                        (cdr powerline-default-separator-dir))))
+      (separator-height '(window-mode-line-height)))
   (custom-theme-set-faces
    'smart-mode-line-powerline2
    `(mode-line-buffer-id ((t :inherit sml/filename :foreground nil :background nil)))
-   `(mode-line-inactive ((t :box (:line-width -8 :color ,inactive))))
+   `(mode-line-inactive ((t :box (:line-width -8 :color ,l-inactive))))
    `(mode-line ((t :background ,l0)))
    `(sml/global    ((t :foreground "grey50" :inverse-video nil)))
 
@@ -75,7 +77,7 @@
 
    ;; 3
    ;; minor modes
-   `(sml/minor-modes         ((t :inherit sml/folder :foreground "grey40")))
+   `(sml/minor-modes         ((t :inherit sml/folder)))
 
    ;; 0
    `(sml/discharging         ((t :background ,l0 :inherit sml/global :foreground "Red")))
@@ -85,24 +87,34 @@
    `(helm-candidate-number ((t :foreground nil :background nil :inherit sml/filename))))
   (custom-theme-set-variables
    'smart-mode-line-powerline2
-   '(sml/mode-width (if (eq (powerline-current-separator) 'arrow) 'right 'full))
+   '(sml/mode-width 'right 'full)
    `(sml/pre-id-separator
      '(""
        (:propertize " " face sml/global)
-       (:eval (propertize " " 'display (funcall ,separator-left nil 'powerline-active1)))
+       (:eval (propertize " " 'display (funcall ,separator-left nil
+                                                'powerline-active1
+                                                ,separator-height)))
        (:propertize " " face powerline-active1)))
    `(sml/pos-id-separator
      '(""
        (:propertize " " face powerline-active1)
-       (:eval (propertize " " 'display (funcall ,separator-left 'powerline-active1 'powerline-active2)))
+       (:eval (propertize " " 'display (funcall ,separator-left
+                                                'powerline-active1
+                                                'powerline-active2
+                                                ,separator-height)))
        (:propertize " " face powerline-active2)))
    `(sml/pre-minor-modes-separator
      '("" (:propertize " " face powerline-active2)
-       (:eval (propertize " " 'display (funcall ,separator-right 'powerline-active2 'powerline-active1)))
+       (:eval (propertize " " 'display (funcall ,separator-right
+                                                'powerline-active2
+                                                'powerline-active1
+                                                ,separator-height)))
        (:propertize " " face powerline-active1)))
    `(sml/pos-minor-modes-separator
      '("" (:propertize " " face powerline-active1)
-       (:eval (propertize " " 'display (funcall ,separator-right 'powerline-active1 nil)))
+       (:eval (propertize " " 'display (funcall ,separator-right
+                                                'powerline-active1 nil
+                                                ,separator-height)))
        (:propertize " " face sml/global)))
    '(sml/pre-modes-separator
      (propertize " " 'face 'sml/modes))))
