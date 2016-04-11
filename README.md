@@ -1,7 +1,8 @@
 # smart-mode-line-powerline2
 an alternate powerline theme for [smart-mode-line](https://github.com/Malabarba/smart-mode-line) (emacs)
 
-![smart-mode-line-powerline2](example.png)
+![smart-mode-line-powerline2](screenshot-example.png)
+![contour separator](screenshot-example-contour.png)
 
 ## Installation
 Place `smart-mode-line-powerline2-theme.el` in your theme load path (defined by variable `custom-theme-load-path`).
@@ -27,4 +28,4 @@ Additionally you should have a look at the Smart Mode Line Faces customisation g
 You might want to decrease the minimum of `sml/name-width` to get the inner layer text to display nearer to the separator.
 
 Here is what it looks like with the default emacs theme:
-![default](default.png)
+![default](screenshot-default.png)
